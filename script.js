@@ -20,7 +20,7 @@ function updateGuests() {
   list.innerHTML = "";
   guests.forEach(guest => {
     const li = document.createElement("li");
-    li.textContent = ${guest};
+    li.textContent = `${guest}`;
     list.appendChild(li);
   });
   document.getElementById("guestCount").textContent = guests.length;
@@ -61,7 +61,7 @@ function updateCategories() {
   list.innerHTML = "";
   categories.forEach(cat => {
     const li = document.createElement("li");
-    li.textContent = ${cat.name}: $${cat.cost};
+    li.textContent = `${cat.name}: $${cat.cost}`;
     list.appendChild(li);
   });
 }
