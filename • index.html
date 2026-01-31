@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Event Planning App</h1>
+
+    <!-- Guest List -->
+    <section>
+        <h2>Guest List</h2>
+        <input id="guestName" placeholder="Guest name">
+        <button onclick="addGuest()">Add</button>
+        <ul id="guestList"></ul>
+        <p>Total Guests: <span id="guestCount">0</span></p>
+    </section>
+
+    <!-- Budget -->
+    <section>
+        <h2>Budget</h2>
+        <input id="budgetInput" type="number" placeholder="Total budget">
+        <button onclick="setBudget()">Set Budget</button>
+        <p>Remaining: $<span id="remainingBudget">0</span></p>
+        
+        <input id="categoryName" placeholder="Category (e.g. Food)">
+        <input id="categoryCost" type="number" placeholder="Cost">
+        <button onclick="addCategory()">Add Category</button>
+        <ul id="categoryList"></ul>
+    </section>
+
+    <!-- Tasks -->
+    <section>
+        <h2>Tasks</h2>
+        <input id="taskInput" placeholder="Task name">
+        <button onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+    </section>
+
+    <!-- Suggestions -->
+    <section>
+        <h2>Suggestions</h2>
+        <p id="suggestionText">No suggestions yet.</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

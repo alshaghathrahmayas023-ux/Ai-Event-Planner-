@@ -1,0 +1,60 @@
+/* --- Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 20px;
+    color: #333;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+section {
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* --- Inputs and Buttons --- */
+input {
+    padding: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* --- Lists --- */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    background-color: #ecf0f1;
+    margin: 4px 0;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+/* --- Suggestions --- */
+#suggestionText {
+    font-weight: bold;
+    color: #e67e22;
+}
