@@ -1,52 +1,43 @@
-/* --- Global Styles --- */
+style: /* --- Global Styles --- */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #f8f9fa, #e9ecef);
-    margin: 0;
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 20px;
     color: #333;
 }
 
-/* --- Headings --- */
 h1, h2 {
     color: #2c3e50;
-    text-align: center;
 }
 
-/* --- Sections --- */
 section {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    max-width: 600px;
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* --- Inputs --- */
+/* --- Inputs and Buttons --- */
 input {
-    padding: 10px;
+    padding: 8px;
     margin-right: 8px;
-    margin-bottom: 10px;
-    border-radius: 6px;
+    margin-bottom: 8px;
+    border-radius: 4px;
     border: 1px solid #ccc;
-    width: 200px;
 }
 
-/* --- Buttons --- */
 button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
+    padding: 8px 12px;
+    background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+    background-color: #2980b9;
 }
 
 /* --- Lists --- */
@@ -56,47 +47,14 @@ ul {
 }
 
 li {
-    margin: 6px 0;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: background 0.2s, transform 0.2s;
-}
-
-li:hover {
-    transform: scale(1.02);
+    background-color: #ecf0f1;
+    margin: 4px 0;
+    padding: 6px 10px;
+    border-radius: 4px;
 }
 
 /* --- Suggestions --- */
 #suggestionText {
     font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 1.1em;
-}
-
-/* --- Budget bar --- */
-#budgetBarContainer {
-    margin-top: 10px;
-    height: 20px;
-    border-radius: 6px;
-    background-color: #ddd;
-    overflow: hidden;
-}
-
-#budgetBar {
-    height: 100%;
-    width: 0%;
-    transition: width 0.4s ease;
-}
-
-/* --- Responsive tweaks --- */
-@media screen and (max-width: 650px) {
-    input {
-        width: 100%;
-        margin-right: 0;
-    }
-    section {
-        margin: 15px;
-        padding: 15px;
-    }
+    color: #e67e22;
 }
