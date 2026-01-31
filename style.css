@@ -1,75 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Event Planner</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body onload="loadData()">
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf7f5;
+    margin: 30px;
+    color: #2c2c2c;
+}
 
-    <header>
-        <h1>Elite Event Planner</h1>
-        <p class="quote">"Plan with elegance, celebrate with style."</p>
-    </header>
+h1 {
+    color: #6b1e2d;
+    font-size: 36px;
+}
 
-    <!-- Event Templates -->
-    <section>
-        <h2>Event Templates</h2>
-        <button onclick="applyTemplate('wedding')">Wedding</button>
-        <button onclick="applyTemplate('birthday')">Birthday</button>
-        <button onclick="applyTemplate('corporate')">Corporate</button>
-    </section>
+h2 {
+    color: #6b1e2d;
+}
 
-    <!-- Guest List -->
-    <section>
-        <h2>Guest List</h2>
-        <input id="guestName" placeholder="Guest name">
-        <button onclick="addGuest()">Add</button>
-        <ul id="guestList"></ul>
-        <p>Total Guests: <span id="guestCount">0</span></p>
-    </section>
+.quote {
+    font-style: italic;
+    color: #c97c2d;
+    margin-bottom: 30px;
+}
 
-    <!-- Budget -->
-    <section>
-        <h2>Budget</h2>
-        <input id="budgetInput" type="number" placeholder="Total budget">
-        <button onclick="setBudget()">Set Budget</button>
-        <p>Remaining: $<span id="remainingBudget">0</span></p>
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
 
-        <div id="budgetBarContainer">
-            <div id="budgetBar"></div>
-        </div>
+input, select {
+    padding: 8px;
+    margin: 5px;
+}
 
-        <input id="categoryName" placeholder="Category (e.g. Food)">
-        <input id="categoryCost" type="number" placeholder="Cost">
-        <button onclick="addCategory()">Add Category</button>
-        <ul id="categoryList"></ul>
-        <canvas id="categoryChart" width="400" height="200"></canvas>
-    </section>
+button {
+    background-color: #6b1e2d;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
-    <!-- Tasks -->
-    <section>
-        <h2>Tasks</h2>
-        <input id="taskInput" placeholder="Task name">
-        <button onclick="addTask()">Add Task</button>
-        <ul id="taskList"></ul>
-    </section>
+button:hover {
+    background-color: #8b2638;
+}
 
-    <!-- Suggestions -->
-    <section>
-        <h2>Suggestions</h2>
-        <p id="suggestionText">No suggestions yet.</p>
-    </section>
+ul {
+    list-style: none;
+    padding-left: 0;
+}
 
-    <!-- Export -->
-    <section>
-        <h2>Export Plan</h2>
-        <button onclick="exportCSV()">Export CSV</button>
-        <button onclick="exportPDF()">Export PDF</button>
-    </section>
+li {
+    background: #f2e6df;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 6px;
+}
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+#suggestionText {
+    font-weight: bold;
+    color: #c97c2d;
+}
