@@ -108,7 +108,7 @@ function updateSuggestions() {
 
     if (guests.length > 300) {
         suggestion.textContent = "Very large event detected. Consider reducing guest count or increasing venue budget.";
-        suggestion.style.color = "#e74c3c"; // red
+        suggestion.style.color = "#e74c3c"; // pastel pink
     } else if (guests.length > 0 && budget > 0 && budget / guests.length < 40) {
         suggestion.textContent = "Low budget per guest. Consider buffet-style catering or a smaller menu.";
         suggestion.style.color = "#f39c12"; // orange
@@ -117,6 +117,6 @@ function updateSuggestions() {
         suggestion.style.color = "#f1c40f"; // yellow
     } else {
         suggestion.textContent = "Your plan looks balanced so far.";
-        suggestion.style.color = "#2ecc71"; // green
+        suggestion.style.color = "#2ecc71"; // pastel blue
     }
 }
