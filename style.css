@@ -56,7 +56,6 @@ ul {
 }
 
 li {
-    background-color: #f1f3f5;
     margin: 6px 0;
     padding: 8px 12px;
     border-radius: 6px;
@@ -64,17 +63,30 @@ li {
 }
 
 li:hover {
-    background-color: #dfe6e9;
     transform: scale(1.02);
 }
 
 /* --- Suggestions --- */
 #suggestionText {
     font-weight: bold;
-    color: #e67e22;
     text-align: center;
     margin-top: 10px;
     font-size: 1.1em;
+}
+
+/* --- Budget bar --- */
+#budgetBarContainer {
+    margin-top: 10px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: #ddd;
+    overflow: hidden;
+}
+
+#budgetBar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s ease;
 }
 
 /* --- Responsive tweaks --- */
@@ -88,4 +100,3 @@ li:hover {
         padding: 15px;
     }
 }
-
