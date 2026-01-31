@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Planner</title>
+    <title>Elite Event Planner</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="loadData()">
 
-    <h1>Event Planning App</h1>
+    <header>
+        <h1>Elite Event Planner</h1>
+        <p class="quote">"Plan with elegance, celebrate with style."</p>
+    </header>
+
+    <!-- Event Templates -->
+    <section>
+        <h2>Event Templates</h2>
+        <button onclick="applyTemplate('wedding')">Wedding</button>
+        <button onclick="applyTemplate('birthday')">Birthday</button>
+        <button onclick="applyTemplate('corporate')">Corporate</button>
+    </section>
 
     <!-- Guest List -->
     <section>
@@ -25,11 +36,16 @@
         <input id="budgetInput" type="number" placeholder="Total budget">
         <button onclick="setBudget()">Set Budget</button>
         <p>Remaining: $<span id="remainingBudget">0</span></p>
-        
+
+        <div id="budgetBarContainer">
+            <div id="budgetBar"></div>
+        </div>
+
         <input id="categoryName" placeholder="Category (e.g. Food)">
         <input id="categoryCost" type="number" placeholder="Cost">
         <button onclick="addCategory()">Add Category</button>
         <ul id="categoryList"></ul>
+        <canvas id="categoryChart" width="400" height="200"></canvas>
     </section>
 
     <!-- Tasks -->
@@ -46,6 +62,14 @@
         <p id="suggestionText">No suggestions yet.</p>
     </section>
 
+    <!-- Export -->
+    <section>
+        <h2>Export Plan</h2>
+        <button onclick="exportCSV()">Export CSV</button>
+        <button onclick="exportPDF()">Export PDF</button>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
