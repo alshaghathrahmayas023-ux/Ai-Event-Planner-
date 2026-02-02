@@ -1,64 +1,167 @@
+/* --- Global Styles --- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #faf7f5;
-    margin: 30px;
-    color: #2c2c2c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4b0000, #ffad33);
+    margin: 0;
+    padding: 20px;
+    color: #fff;
 }
 
-h1 {
-    color: #6b1e2d;
-    font-size: 36px;
+body.dark {
+    background: linear-gradient(to right, #0e0f13, #2b2f3a);
+    color: #e9e9ee;
 }
 
-h2 {
-    color: #6b1e2d;
-}
-
-.quote {
-    font-style: italic;
-    color: #c97c2d;
+/* Header */
+header {
+    text-align: center;
     margin-bottom: 30px;
 }
 
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+header h1 {
+    font-size: 2.5em;
+    color: #ffe5b4;
+}
+header .quote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #ffd699;
+}
+
+/* Sections */
 section {
-    background: white;
+    background-color: rgba(255,255,255,0.1);
     padding: 20px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-input, select {
-    padding: 8px;
-    margin: 5px;
+body.dark section {
+    background-color: rgba(255,255,255,0.06);
 }
 
-button {
-    background-color: #6b1e2d;
-    color: white;
+/* Inputs & Buttons */
+input {
+    padding: 10px;
+    margin: 5px 5px 10px 0;
+    border-radius: 8px;
     border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
+    width: 200px;
 }
 
+label {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.9em;
+    color: rgba(255,255,255,0.9);
+}
+
+body.dark label {
+    color: rgba(255,255,255,0.8);
+}
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #990000;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
 button:hover {
+    background-color: #cc3300;
+    transform: scale(1.05);
+}
+
+.theme-toggle {
+    background-color: #3a3a3a;
+}
+
+.theme-toggle:hover {
+    background-color: #525252;
+}
+
+.danger {
+    background-color: #6b1e2d;
+}
+
+.danger:hover {
     background-color: #8b2638;
 }
 
+/* Lists */
 ul {
     list-style: none;
     padding-left: 0;
 }
-
 li {
-    background: #f2e6df;
-    margin: 5px 0;
-    padding: 8px;
-    border-radius: 6px;
+    margin: 6px 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.2);
+    transition: transform 0.2s;
+}
+li:hover {
+    transform: scale(1.02);
 }
 
+/* Budget Bar */
+#budgetBarContainer {
+    margin-top: 10px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.3);
+    overflow: hidden;
+}
+#budgetBar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s ease;
+    background-color: #ffd699;
+}
+
+/* Suggestions */
 #suggestionText {
     font-weight: bold;
-    color: #c97c2d;
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.status {
+    max-width: 600px;
+    margin: 10px auto 0;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    text-align: center;
+    font-weight: 600;
+}
+
+.status.error {
+    background: rgba(255, 87, 87, 0.2);
+    color: #ffd6d6;
+}
+
+.muted {
+    text-align: center;
+    opacity: 0.85;
+    margin: 10px 0 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 650px) {
+    input { width: 100%; margin: 5px 0; }
+    section { margin: 15px; padding: 15px; }
 }
