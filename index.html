@@ -9,8 +9,13 @@
 <body onload="loadData()">
 
     <header>
-        <h1>Elite Event Planner</h1>
-        <p class="quote">"Plan with elegance, celebrate with style."</p>
+        <div class="header-row">
+            <div>
+                <h1>Elite Event Planner</h1>
+                <p class="quote">"Plan with elegance, celebrate with style."</p>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+        </div>
     </header>
 
     <!-- Event Templates -->
@@ -24,6 +29,7 @@
     <!-- Guest List -->
     <section>
         <h2>Guest List</h2>
+        <label for="guestName">Guest name</label>
         <input id="guestName" placeholder="Guest name">
         <button onclick="addGuest()">Add</button>
         <ul id="guestList"></ul>
@@ -33,6 +39,7 @@
     <!-- Budget -->
     <section>
         <h2>Budget</h2>
+        <label for="budgetInput">Total budget</label>
         <input id="budgetInput" type="number" placeholder="Total budget">
         <button onclick="setBudget()">Set Budget</button>
         <p>Remaining: $<span id="remainingBudget">0</span></p>
@@ -41,16 +48,20 @@
             <div id="budgetBar"></div>
         </div>
 
+        <label for="categoryName">Category name</label>
         <input id="categoryName" placeholder="Category (e.g. Food)">
+        <label for="categoryCost">Category cost</label>
         <input id="categoryCost" type="number" placeholder="Cost">
         <button onclick="addCategory()">Add Category</button>
         <ul id="categoryList"></ul>
+        <p id="chartEmpty" class="muted">No data yet.</p>
         <canvas id="categoryChart" width="400" height="200"></canvas>
     </section>
 
     <!-- Tasks -->
     <section>
         <h2>Tasks</h2>
+        <label for="taskInput">Task name</label>
         <input id="taskInput" placeholder="Task name">
         <button onclick="addTask()">Add Task</button>
         <ul id="taskList"></ul>
@@ -67,7 +78,10 @@
         <h2>Export Plan</h2>
         <button onclick="exportCSV()">Export CSV</button>
         <button onclick="exportPDF()">Export PDF</button>
+        <button class="danger" onclick="clearAll()">Clear All</button>
     </section>
+
+    <p id="statusMessage" class="status" aria-live="polite"></p>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
