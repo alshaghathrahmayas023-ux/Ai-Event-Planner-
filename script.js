@@ -240,6 +240,35 @@ function renderTasks() {
         });
         list.appendChild(li);
     });
+    updateTimeEstimate();
+}
+
+function updateTimeEstimate() {
+    const estimateEl = $("timeEstimate");
+    if (!estimateEl) return;
+    
+    const taskCount = tasks.length;
+    
+    if (taskCount === 0) {
+        estimateEl.textContent = "Estimated time: 0 hours";
+        return;
+    }
+    
+    // Assume each task takes approximately 1 hour
+    const totalHours = taskCount;
+    
+    let displayText = "";
+    if (totalHours < 24) {
+        displayText = `Estimated time: ${totalHours} hour${totalHours !== 1 ? 's' : ''}`;
+    } else if (totalHours < 168) { // Less than 1 week
+        const days = Math.ceil(totalHours / 24);
+        displayText = `Estimated time: ${days} day${days !== 1 ? 's' : ''}`;
+    } else {
+        const weeks = Math.ceil(totalHours / 168);
+        displayText = `Estimated time: ${weeks} week${weeks !== 1 ? 's' : ''}`;
+    }
+    
+    estimateEl.textContent = displayText;
 }
 
 function applyTemplate(type) {
